@@ -3,23 +3,17 @@ package lk.ijse.dep.service;
 public interface Board {
     public int NUM_OF_ROWS = 5;
     public int NUM_OF_COLS = 6;
+    BoardUI getBoardUI();
+   int findNextAvailableSpot(int col);
 
-    public abstract BoardUI getBoard();
+   boolean isLegalMove(int col);
 
+   boolean existLegalMoves();
 
-
-    public abstract int findnextAvailableSpot(int col);
-
-
-    public abstract boolean isLegalMove(int col);
-
-    public abstract boolean existLegalMoves();
-
-
-    public abstract void updateMove(int col, Piece move);
-
-
-    public abstract Winner findWinner();
+  void updateMove(int col, Piece move);
+  void updateMove(int col, int row,Piece move);
+  Piece[][] getPieces();
+  Winner findWinner();
 
 
 }

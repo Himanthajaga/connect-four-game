@@ -1,36 +1,10 @@
 package lk.ijse.dep.service;
 
-public class Player implements Board {
-    @Override
-    public BoardUI getBoard() {
-        return null;
+public abstract class Player{
+    protected Board board;
+    public Player(Board board) {
+        this.board = board;
     }
 
-    @Override
-    public int findnextAvailableSpot(int col) {
-        return 0;
+        public abstract void movePiece ( int col);
     }
-
-    @Override
-    public boolean isLegalMove(int col) {
-        return false;
-    }
-
-    @Override
-    public boolean existLegalMoves() {
-        return false;
-    }
-
-    @Override
-    public void updateMove(int col, Piece move) {
-
-    }
-
-    @Override
-    public Winner findWinner() {
-        return null;
-    }
-
-    public void movePiece(int i) {
-    }
-}

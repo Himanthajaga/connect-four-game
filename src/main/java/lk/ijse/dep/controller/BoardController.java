@@ -16,10 +16,6 @@ import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import lk.ijse.dep.service.*;
 
-import static javax.swing.text.html.parser.DTDConstants.EMPTY;
-import static jdk.internal.org.jline.utils.AttributedStyle.BLUE;
-import static jdk.internal.org.jline.utils.AttributedStyle.GREEN;
-
 public class BoardController implements BoardUI {
 
     private static final int RADIUS = 42;
@@ -40,7 +36,7 @@ public class BoardController implements BoardUI {
     private void initializeGame() {
         Board newBoard = new BoardImpl(this);
         humanPlayer = new HumanPlayer(newBoard);
-        aiPlayer = new AiPlayer(newBoard);
+       aiPlayer = new AiPlayer(newBoard);
     }
 
     public void initialize() {

@@ -1,10 +1,11 @@
 package lk.ijse.dep.service;
 
 public class HumanPlayer extends Player{
-    public HumanPlayer(Board board) {
+    public HumanPlayer (Board board) {
         super(board);
     }
-
+// method will be automatically
+//invoked with the clicked column index
     @Override
     public void movePiece(int col) {
 
